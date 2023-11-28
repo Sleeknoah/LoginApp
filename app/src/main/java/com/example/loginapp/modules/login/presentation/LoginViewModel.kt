@@ -36,8 +36,8 @@ class LoginViewModel @Inject constructor(
 
     fun login(username: String, password: String){
             viewModelScope.launch{
-                _uiState.value = ViewState.LoadingState
                 if(username.isNotEmpty() && password.isNotEmpty()) {
+                    _uiState.value = ViewState.LoadingState
                     loginUsecase.execute(username, password)
                         .flowOn(dispatcherIO).collect {result ->
                             when(result){

@@ -21,7 +21,7 @@ import com.example.loginapp.databinding.ActivityProfileBinding
 import java.io.ByteArrayOutputStream
 
 class ProfileActivity : AppCompatActivity() {
-    lateinit var profileBinding: ActivityProfileBinding
+    private lateinit var profileBinding: ActivityProfileBinding
     private lateinit var getContent: ActivityResultLauncher<Intent>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
